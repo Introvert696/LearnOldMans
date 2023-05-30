@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
+  background-color: #393646;
+  font-family: "Roboto", sans-serif;
+  color: #f4eee0;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.login-form {
+  width: 30vw;
+  height: 100%;
+  /* border: 1px red solid; */
+  margin: auto;
+  text-align: center;
+  margin-top: 10%;
+  background-color: #4f4557;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  color: white;
+  border-radius: 10px;
+}
+.login-form input {
+  width: 60%;
+}
+.input-box {
+  margin-top: 15px;
+}
+.login-form button {
+  margin-top: 15px;
+  width: 60%;
+  height: 40px;
+
+  font-size: 14px;
+  font-weight: 800;
+  color: #393646;
+}
+.login-form a {
+  text-decoration: none;
+  color: white;
+  padding-top: 15px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.left-side p a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+.right-side {
+  display: flex;
+}
+.right-side a {
+  text-decoration: none;
+  color: white;
+  margin-left: 25px;
+  margin-top: 15px;
+}
+.profile {
+  background-color: #4f4557;
+  width: 40%;
+  padding-top: 25px;
+  margin-left: 25px;
+  margin-top: 50px;
+  border-radius: 15px;
+  padding-bottom: 25px;
+}
+.userinfo {
+  margin-left: 25px;
+}
+.userinfo a {
+  text-decoration: none;
+  color: white;
+}
+.article {
+  width: 40vw;
+  height: 100px;
+  text-align: center;
+  background-color: #6d5d6e;
+  margin: auto;
+  justify-content: space-between;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+.article a {
+  text-decoration: none;
+  color: white;
+}
+.article-title {
+  padding-top: 20px;
+}
+.current_answer {
+  background-color: gray;
+  color: gray;
+  width: 20%;
+}
+
+.current_answer:hover {
+  background-color: white;
+  color: black;
+}
+.article-content {
+  width: 90%;
+
+  margin: auto;
+}
+.article-title-view {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 36px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+.article-text {
+  margin-top: 24px;
+  font-size: 24px;
+}
+.article-date {
+  margin-top: 25px;
+  font-size: 16px;
+}
+.question {
+  margin-left: 25px;
+  font-size: 24px;
+}
+.test {
+  display: flex;
+  width: 100%;
+}
+.variant {
+  width: 300px;
+  height: 30px;
+  background-color: #6d5d6e;
+  margin-left: 20px;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.select-test {
+  width: 40%;
+  margin-left: 35px;
+  height: 40px;
+  margin-top: 15px;
+  border-radius: 10px;
+  border: none;
+}
+.tag-section {
+  text-align: center;
+
+  margin: auto;
+}
+.tag-section hr {
+  width: 30%;
+}
+.flex {
+  display: flex;
+}
+.btn {
+  border-radius: 20px;
+  width: 20%;
+  text-align: center;
+  height: 50px;
+  background-color: #6d5d6e;
+  margin: auto;
+  padding-top: 20px;
+}
+.btn a {
+  text-decoration: none;
+  color: white;
+}
+.tests {
+  text-align: center;
+  background-color: #6d5d6e;
+  width: 30%;
+  margin: auto;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+.tests p {
+  font-size: 18px;
+}
+.tests a {
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+}
+.main-test {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+.back-to-article {
+  padding-top: 25px;
+}
+.back-to-article a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+}
+.test-title {
+  text-align: center;
+  font-size: 24px;
+}
