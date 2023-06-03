@@ -2,46 +2,47 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <title>Статьи</title>
 </head>
 
 <body>
-    <header>
-        <div class="left-side">
-            <p>Повышение информационной грамотности пенсионеров</p>
-        </div>
-        <div class="right-side">
-            <a href="#">Главная</a>
-            <a href="/articles">Статьи</a>
-            <a href="/profile">Профиль</a>
-            <a href="#">О нас</a>
-        </div>
-    </header>
-    <div class="articles">
+  <header>
+    <div class="logo">
+      <p>
+        Повышение информационной <br />
+        грамотности пенсионеров
+      </p>
+    </div>
+    <div class="header-links">
+      <a href="#">Главная</a>
+      <a href="#">Статьи</a>
+      <a href="#">Профиль</a>
+    </div>
+  </header>
+  <div class="section-title">
+    <p>Уроки</p>
+  </div>
+  <section class="articles">
+    <?php foreach ($tags as $t) :  ?>
+      <div class="razdel">
+        <span><?php print_r($t['tag']); ?></span>
+        <br />
 
-        <?php foreach ($tags as $t) :  ?>
-            <div class="tag-section">
-                <p><?php print_r($t['tag']); ?></p>
-                <hr>
-            </div>
-            <br>
-            <?php foreach ($articles as $a) :  ?>
-                <?php if ($a['tag_title'] == $t['tag']) { ?>
-                    <div class="article">
-                        <p class="article-title"><?php echo ($a['article_title']); ?></p>
-                        <a href="/articles/<?php echo ($a['article_id']); ?>"> Перейти</a>
-                    </div>
-                <?php } ?>
-            <?php endforeach ?>
-            <br>
+        <?php foreach ($articles as $a) :  ?>
+          <?php if ($a['tag_title'] == $t['tag']) { ?>
+            <p><a href="/articles/<?php echo ($a['article_id']); ?>"><?php echo ($a['article_title']); ?></a></p>
+          <?php } ?>
         <?php endforeach ?>
 
+      </div>
+    <?php endforeach ?>
 
-    </div>
+
+  </section>
 </body>
 
 </html>

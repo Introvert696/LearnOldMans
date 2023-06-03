@@ -43,6 +43,7 @@ class Router
         // Роут для просмотра статей
         else if ($current_uri[0] == "articles") {
             // если есть айди после слеша, то пытаемся получить статью
+
             if (isset($current_uri[1])) {
                 ArticleController::showAction($current_uri[1], $this->Auth());
             }
