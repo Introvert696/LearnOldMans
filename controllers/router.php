@@ -61,6 +61,7 @@ class Router
         }
         // Роут для тестов
         else if ($current_uri[0] == "test" && $this->Auth()) {
+
             // если есть айди после слеша, то пытаемся получить тест
             if (isset($current_uri[1])) {
                 TestController::showAction($current_uri[1], $this->Auth());
@@ -69,10 +70,11 @@ class Router
             else {
                 //так же проверяем пост, если там есть ответ,
                 // то сохраняем его
-                if (isset($_POST["answer"])) {
-                    TestResultController::storeAction($this->Auth(), $_POST["id"], $_POST["answer"]);
+
+                if (isset($_POST["testId"]) && isset($_POST["value"])) {
+                    TestResultController::storeAction($this->Auth(), $_POST["testId"], $_POST["value"]);
                 } else {
-                    header('Location: ' . $_SERVER['HTTP_REFERER']);
+                    // header('Location: ' . $_SERVER['HTTP_REFERER']);
                 }
             }
         }

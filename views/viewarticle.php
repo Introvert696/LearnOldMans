@@ -23,6 +23,7 @@
       <a href="/profile">Профиль</a>
     </div>
   </header>
+
   <section class="article-view">
     <div class="section-title">
       <p><?php echo $article['title'] ?></p>
@@ -79,11 +80,63 @@
           </div>
         </div>
 
-        <button type="submit" class="select-test">Проверить ответ</button>
+        <!-- <button type="submit" class="select-test">Проверить ответ</button> -->
       </form>
       </div>
     <?php } ?>
+    <div style="margin: auto; text-align:center;">
+      <button id="checkBtn" class="select-test">Проверить все ответы</button>
+    </div>
   </section>
+  <script>
+    let checker_btn = document.getElementById("checkBtn");
+    checker_btn.addEventListener("click", () => {
+
+      let forms = document.getElementsByTagName("form");
+      forms = [...forms];
+      let userAnswers = [];
+
+      forms.forEach((form) => {
+
+        let formData = {};
+        let inputs = form.getElementsByTagName("input");
+        inputs = [...inputs];
+        formData["testId"] = inputs[0].value;
+        inputs.forEach((input) => {
+          if (input.checked) {
+
+            formData["value"] = input.value;
+          }
+        });
+        let encodedData = Object.keys(formData).map(function(k) {
+          return encodeURIComponent(k) + '=' + encodeURIComponent(formData[k])
+        }).join('&');
+
+        console.log(encodedData);
+
+        sendAnswer(encodedData);
+
+
+
+      });
+
+
+    });
+
+    async function sendAnswer(userAnswers) {
+      let response = await fetch("/test", {
+
+
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: userAnswers,
+      });
+      let result = await response.text();
+      location.reload();
+    }
+  </script>
 </body>
 
 </html>

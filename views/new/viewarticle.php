@@ -91,7 +91,7 @@
 
         </div>
     <?php } ?>
-
+    <button>Проверить все ответы</button>
     <script>
 
     </script>

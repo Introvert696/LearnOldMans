@@ -9,7 +9,12 @@ class ProfileController
         $userLogin = $_COOKIE["user"];
         $user = User::getByLogin($userLogin)[0];
 
-        $myTest = Test_result::getMyTest($user["id"])[0];
+
+        $myTest = Test_result::getMyTest($user["id"]);
+        if (isset($myTest[0])) {
+            $myTest = $myTest[0];
+        }
+
         //print_r($myTest);
         require_once "views/profile.php";
     }

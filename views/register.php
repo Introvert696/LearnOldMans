@@ -2,50 +2,57 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <title>Register</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <title>Регистрация</title>
 </head>
 
 <body>
+  <header>
+    <div class="logo">
+      <p>
+        Повышение информационной <br />
+        грамотности пенсионеров
+      </p>
+    </div>
+    <div class="header-links">
+      <a href="/">Главная</a>
+      <a href="/articles">Статьи</a>
+      <a href="/profile">Профиль</a>
+    </div>
+  </header>
+  <div class="login-section register-section">
+    <form action="/register" method="POST">
+      <div class="login-title">
+        <p>Регистрация</p>
+      </div>
 
-    <form method="POST" class="login-form" action="/register">
-        <h1>Регистрация</h1>
-        <div class="input-box">
-            <label for="fio">Введите ФИО:</label>
-            <br>
-            <input type="text" name="FIO">
-        </div>
-        <div class="input-box">
-            <label for="birhday">Введите дату рождения:</label>
-            <br>
-            <input type="date" name="birhday">
-        </div>
-        <div class="input-box">
-            <label for="login">Введите логин:</label>
-            <br>
-            <input type="text" name="login">
-        </div>
-        <div class="input-box">
-            <label for="password">Введите пароль:</label>
-            <br>
-            <input type="password" name="password">
-        </div>
-        <div class="input-box">
-            <label for="phone">Введите номер телефона:</label>
-            <br>
-            <input type="number" name="phone">
-        </div>
-        <div class="input-box">
-            <label for="email">Введите почту:</label>
-            <br>
-            <input type="email" name="email">
-        </div>
-        <br>
-        <button type="submit">Регистрация </button>
+      <div class="input">
+        <input type="text" name="FIO" id="FIO" placeholder="ФИО:" />
+      </div>
+      <div class="input">
+        <input type="date" name="birhday" id="birhday" placeholder="Дата рождения:" />
+      </div>
+      <div class="input">
+        <input type="text" name="login" id="login" placeholder="Логин:" />
+      </div>
+      <div class="input">
+        <input type="password" name="password" id="password" placeholder="Пароль:" />
+      </div>
+      <div class="input">
+        <input type="number" name="phone" id="phone" placeholder="Номер телефона:" />
+      </div>
+      <div class="input">
+        <input type="email" name="email" id="email" placeholder="Почта:" />
+      </div>
+      <button type="submit" class="subm-btn">Регистрация</button>
+      <div class="reg-link">
+        <a href="/login">или войдите</a>
+      </div>
     </form>
+  </div>
 </body>
 
 </html>

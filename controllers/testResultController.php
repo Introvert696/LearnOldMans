@@ -15,7 +15,6 @@ class TestResultController
             $result = Test_result::insert($userid, $id, 0);
         }
         print("Ответ записан");
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
     }
     static public function allMy($id)
     {

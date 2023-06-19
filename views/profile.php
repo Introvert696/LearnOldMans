@@ -34,7 +34,9 @@
         <p>Дата рождения: <span><?php echo $user["birhday"] ?></span></p>
         <p>Номер телефона: <span><?php echo $user["phone"] ?></span></p>
         <p>Электронная почта: <span><?php echo $user["email"] ?></span></p>
-        <p>Пройдено тестов: <span><?php echo $myTest['correct_answers'] ?> верных из <?php echo $myTest['total_questions'] ?> вопросов</span></p>
+        <?php if (isset($myTest['correct_answers'])) { ?>
+          <p>Пройдено тестов: <span><?php echo $myTest['correct_answers'] ?> верных из <?php echo $myTest['total_questions'] ?> вопросов</span></p>
+        <?php } ?>
       </div>
     </div>
   </section>
